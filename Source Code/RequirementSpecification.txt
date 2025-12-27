@@ -1,0 +1,117 @@
+================================================================================
+              YouTube Downloader Tool - Requirement Specification
+================================================================================
+
+--------------------------------------------------------------------------------
+PURPOSE
+--------------------------------------------------------------------------------
+This tool provides a simple graphical user interface (GUI) to download YouTube 
+videos and playlists. It aims to make video downloading accessible to users 
+who are not comfortable with command-line tools.
+
+--------------------------------------------------------------------------------
+FUNCTIONAL REQUIREMENTS
+--------------------------------------------------------------------------------
+1. Accept YouTube video or playlist URLs
+2. Fetch and display video/playlist information (title, video count)
+3. Allow users to select specific videos from a playlist
+4. Provide quality selection options (144p to 4K, or MP3 audio-only)
+5. Allow users to choose download location
+6. Show download progress with status updates
+7. Skip already downloaded files automatically
+8. Support cancellation of ongoing downloads
+
+--------------------------------------------------------------------------------
+NON-FUNCTIONAL REQUIREMENTS
+--------------------------------------------------------------------------------
+1. Portable - Single executable, no installation required
+2. Windows compatible (Windows 10/11)
+3. User-friendly GUI with intuitive controls
+4. Responsive UI during downloads (non-blocking)
+
+--------------------------------------------------------------------------------
+THIRD-PARTY LIBRARIES & TOOLS
+--------------------------------------------------------------------------------
+
+1. yt-dlp (https://github.com/yt-dlp/yt-dlp)
+   -------------------------------------------------------------------------
+   PURPOSE: Core download engine for YouTube videos
+   
+   WHY WE USE IT:
+   - Most actively maintained YouTube downloader
+   - Supports thousands of video sites beyond YouTube
+   - Handles video/audio extraction and format selection
+   - Provides playlist parsing and metadata extraction
+   - Regular updates to handle YouTube changes
+   - Command-line tool that can be wrapped by our GUI
+   
+   LICENSE: Unlicense (Public Domain)
+   - Free to use, modify, and distribute without restrictions
+
+2. FFmpeg (https://ffmpeg.org/)
+   -------------------------------------------------------------------------
+   PURPOSE: Video/audio processing and conversion
+   
+   WHY WE USE IT:
+   - Merges separate video and audio streams into single file
+   - Converts audio to MP3 format when audio-only is selected
+   - Industry-standard multimedia processing tool
+   - Required by yt-dlp for post-processing
+   
+   LICENSE: LGPL/GPL (see LICENSES folder)
+   - Free to use and distribute with proper attribution
+   - Source code available at https://ffmpeg.org/download.html
+
+3. Python Tkinter (Built-in)
+   -------------------------------------------------------------------------
+   PURPOSE: Graphical User Interface
+   
+   WHY WE USE IT:
+   - Built into Python - no additional installation
+   - Cross-platform GUI toolkit
+   - Lightweight and simple for basic applications
+   - Sufficient for our UI requirements
+
+4. PyInstaller (Build tool only)
+   -------------------------------------------------------------------------
+   PURPOSE: Creates standalone executable
+   
+   WHY WE USE IT:
+   - Bundles Python, libraries, and dependencies into single EXE
+   - Makes the tool portable without requiring Python installation
+   - Supports including additional data files (yt-dlp, ffmpeg)
+
+--------------------------------------------------------------------------------
+ARCHITECTURE
+--------------------------------------------------------------------------------
++-------------------+
+|   GUI (Tkinter)   |  <- User interface
++-------------------+
+         |
+         v
++-------------------+
+| YouTubeDownloader |  <- Main application logic
++-------------------+
+         |
+         v
++-------------------+
+|     yt-dlp.exe    |  <- Download engine (subprocess)
++-------------------+
+         |
+         v
++-------------------+
+|   FFmpeg/FFprobe  |  <- Media processing
++-------------------+
+
+--------------------------------------------------------------------------------
+FILE STRUCTURE
+--------------------------------------------------------------------------------
+YouTubeDownloader.pyw   - Main Python application (GUI + logic)
+build_exe.py            - PyInstaller build script
+yt-dlp.exe              - YouTube download engine
+ffmpeg_bin/
+  ├── ffmpeg.exe        - Media converter/merger
+  └── ffprobe.exe       - Media information tool
+
+================================================================================
+

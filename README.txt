@@ -54,10 +54,20 @@ CREDITS
 - FFmpeg: https://ffmpeg.org/
 
 --------------------------------------------------------------------------------
-LICENSE
+LICENSE & LEGAL
 --------------------------------------------------------------------------------
 This tool is provided as-is for personal use.
-yt-dlp and FFmpeg are subject to their respective licenses.
+
+Third-party components and their licenses (see LICENSES folder):
+
+- yt-dlp: Unlicense (Public Domain)
+  https://github.com/yt-dlp/yt-dlp
+
+- FFmpeg: LGPL v2.1 / GPL v2
+  https://ffmpeg.org/
+  Source code: https://git.ffmpeg.org/ffmpeg.git
+
+Full license texts are available in the LICENSES folder.
 
 ================================================================================
 

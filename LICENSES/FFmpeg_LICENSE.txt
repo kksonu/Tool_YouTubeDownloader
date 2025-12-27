@@ -1,0 +1,78 @@
+FFmpeg License
+==============
+
+Source: https://ffmpeg.org/
+Download: https://ffmpeg.org/download.html
+Source Code: https://git.ffmpeg.org/ffmpeg.git
+
+FFmpeg is licensed under the GNU Lesser General Public License (LGPL) 
+version 2.1 or later. However, FFmpeg incorporates several optional 
+parts and optimizations that are covered by the GNU General Public 
+License (GPL) version 2 or later. If those parts get used the GPL 
+applies to all of FFmpeg.
+
+The FFmpeg binaries included in this project are the "essentials" build
+which is LGPL licensed.
+
+--------------------------------------------------------------------------------
+                    GNU LESSER GENERAL PUBLIC LICENSE
+                         Version 2.1, February 1999
+--------------------------------------------------------------------------------
+
+Copyright (C) 1991, 1999 Free Software Foundation, Inc.
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+Everyone is permitted to copy and distribute verbatim copies of this 
+license document, but changing it is not allowed.
+
+[This is the first released version of the Lesser GPL. It also counts
+as the successor of the GNU Library Public License, version 2, hence
+the version number 2.1.]
+
+                              Preamble
+
+The licenses for most software are designed to take away your freedom 
+to share and change it. By contrast, the GNU General Public Licenses 
+are intended to guarantee your freedom to share and change free 
+software--to make sure the software is free for all its users.
+
+This license, the Lesser General Public License, applies to some 
+specially designated software packages--typically libraries--of the 
+Free Software Foundation and other authors who decide to use it. You 
+can use it too, but we suggest you first think carefully about whether 
+this license or the ordinary General Public License is the better 
+strategy to use in any particular case, based on the explanations below.
+
+--------------------------------------------------------------------------------
+                           TERMS AND CONDITIONS
+--------------------------------------------------------------------------------
+
+For the complete LGPL 2.1 license text, please visit:
+https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+
+For the complete GPL 2.0 license text, please visit:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+--------------------------------------------------------------------------------
+                              ATTRIBUTION
+--------------------------------------------------------------------------------
+
+FFmpeg is a trademark of Fabrice Bellard, originator of the FFmpeg project.
+
+This software uses libraries from the FFmpeg project under the LGPLv2.1.
+
+The FFmpeg source code can be obtained from:
+- Official website: https://ffmpeg.org/download.html
+- Git repository: https://git.ffmpeg.org/ffmpeg.git
+
+--------------------------------------------------------------------------------
+                               DISCLAIMER
+--------------------------------------------------------------------------------
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR 
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.
+
